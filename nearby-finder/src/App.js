@@ -98,6 +98,7 @@ function App() {
   const searchWithCustomKeywords = async () => {
     setIsLoading(true);
     try {
+      
       const response = await axios.get(`${API_URL}/custom-places`, {
         params: {
           location: `${location.lat},${location.lng}`,
@@ -208,6 +209,8 @@ function App() {
       lat: place.geometry.location.lat(),
       lng: place.geometry.location.lng(),
     };
+
+    console.log(`${API_URL}/geocode`)
 
     try {
       const geocodeResponse = await axios.get(`${API_URL}/geocode`, {
