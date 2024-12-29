@@ -13,7 +13,7 @@ require("dotenv").config();
 
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: 'https://geo-con.vercel.app',
   credentials: true,
   optionsSuccessStatus: 200
 };
